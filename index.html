@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrew Kim — Communication Design</title>
+  <meta name="description" content="Andrew Kim is a communication design student at Parsons in New York.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 0. 키보드 사용자용: 본문으로 바로 건너뛰기 -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- 1. HEADER: 이름 / 현재 위치·시간 / 내비게이션 -->
+  <header class="site-header">
+    <a class="logo" href="index.html">Andrew Kim</a>
+    <p class="status">Currently in New York <span id="clock">--:--</span></p>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- 2. HERO: 이름·직함 + 한 줄 소개 -->
+    <section class="hero">
+
+      <!-- 회전하는 링: 카드 위치는 script.js가 매 프레임 계산 -->
+      <div class="orbit" aria-hidden="true">
+        <ul class="ring">
+          <!-- 카드를 늘리거나 줄여도 JS가 알아서 간격을 나눔 -->
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+          <li class="card"><div class="card-inner"></div></li>
+        </ul>
+      </div>
+
+      <!-- 원 가운데 텍스트 -->
+      <div class="hero-text">
+        <p class="hero-meta">Communication design student</p>
+        <h1>I’m Andrew, a designer at Parsons making clear, playful things for screens and print.</h1>
+      </div>
+    </section>
+
+    <!-- 3. SELECTED WORK: 대표 작업 카드 -->
+    <section class="selected-work" id="work">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <a href="work.html">View all</a>
+      </div>
+      <p class="section-intro">A few recent projects across web, type and motion, each with the thinking behind it.</p>
+
+      <ul class="case-grid">
+        <li class="case">
+          <a href="case-1.html">
+            <div class="media" role="img" aria-label="Project image"></div>
+            <p class="case-type">Class project</p>
+            <h3>Project title one</h3>
+            <p class="case-tags">Web design, HTML/CSS</p>
+          </a>
+        </li>
+        <li class="case">
+          <a href="case-2.html">
+            <div class="media" role="img" aria-label="Project image"></div>
+            <p class="case-type">Class project</p>
+            <h3>Project title two</h3>
+            <p class="case-tags">Interaction, Typography</p>
+          </a>
+        </li>
+        <li class="case">
+          <a href="case-3.html">
+            <div class="media" role="img" aria-label="Project image"></div>
+            <p class="case-type">Competition</p>
+            <h3>Project title three</h3>
+            <p class="case-tags">Video, Motion</p>
+          </a>
+        </li>
+        <li class="case">
+          <a href="case-4.html">
+            <div class="media" role="img" aria-label="Project image"></div>
+            <p class="case-type">Personal</p>
+            <h3>Project title four</h3>
+            <p class="case-tags">Branding, Visual identity</p>
+          </a>
+        </li>
+      </ul>
+
+      <a class="view-all" href="work.html">View all</a>
+    </section>
+
+    <!-- 4. MORE PROJECTS: 이미지 줄 + 텍스트 목록 -->
+    <section class="more-projects">
+      <h2>More projects</h2>
+      <div class="media-row">
+        <div class="media" role="img" aria-label="Project image"></div>
+        <div class="media" role="img" aria-label="Project image"></div>
+        <div class="media" role="img" aria-label="Project image"></div>
+        <div class="media" role="img" aria-label="Project image"></div>
+      </div>
+      <ul class="project-list">
+        <li>
+          <h3>Project name <span>Class project</span></h3>
+          <p>One sentence about what this project is.</p>
+          <p class="case-tags">Role, Role</p>
+        </li>
+        <li>
+          <h3>Project name <span>Personal</span></h3>
+          <p>One sentence about what this project is.</p>
+          <p class="case-tags">Role, Role</p>
+        </li>
+        <li>
+          <h3>Project name <span>Class project</span></h3>
+          <p>One sentence about what this project is.</p>
+          <p class="case-tags">Role, Role</p>
+        </li>
+        <li>
+          <h3>Project name <span>Competition</span></h3>
+          <p>One sentence about what this project is.</p>
+          <p class="case-tags">Role, Role</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 5. MARQUEE: 옆으로 흐르는 로고/키워드 띠 (CSS 애니메이션) -->
+    <section class="marquee-section">
+      <h2>Tools I work with</h2>
+      <div class="marquee">
+        <!-- 목록은 하나만 적으면 됨. 끊김 없게 script.js가 필요한 만큼 복사함 -->
+        <ul class="marquee-track">
+          <li>Figma</li><li>Illustrator</li><li>InDesign</li><li>After Effects</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. ABOUT ~ EXPERIENCE: 한 덩어리로 스크롤되는 구간
+         왼쪽 라벨·오른쪽 이미지는 화면에 붙어 있고(sticky), 가운데 글만 내려감 -->
+    <section class="about-scroll" id="about">
+
+      <!-- 왼쪽: 지금 읽고 있는 파트 이름 (script.js가 글자를 섞으며 바꿈) -->
+      <div class="about-pin">
+        <p class="pin-label" aria-hidden="true">About me</p>
+      </div>
+
+      <!-- 가운데: 실제로 스크롤되는 글. data-label = 왼쪽에 띄울 이름 -->
+      <div class="about-text">  <!-- 위아래 끝으로 갈수록 흐려짐 (script.js 6번) -->
+
+        <article class="about-post" data-label="About me">
+          <h2 class="sr-only">About me</h2>
+          <div class="about-body">
+            <p>I’m Andrew Kim, a communication design student at Parsons in New York.</p>
+            <p>Before design school I served in the Korean army. Now I’m focused on interaction, typography and the web.</p>
+            <p>Off-screen, I’m usually <span class="blank" tabindex="0" aria-live="polite">&nbsp;</span>.</p>
+          </div>
+        </article>
+
+        <article class="about-post" data-label="What I do">
+          <h2 class="sr-only">What I do</h2>
+          <div class="post-row">
+            <h3>Interaction & UI</h3>
+            <ul class="reveal-list"><li>Interface design</li><li>Wireframing</li><li>User flows</li><li>Prototyping</li></ul>
+          </div>
+          <div class="post-row">
+            <h3>Websites</h3>
+            <ul class="reveal-list"><li>Web design</li><li>HTML & CSS</li><li>JavaScript</li><li>Responsive layout</li></ul>
+          </div>
+          <div class="post-row">
+            <h3>Type & identity</h3>
+            <ul class="reveal-list"><li>Typography</li><li>Visual identity</li><li>Motion</li><li>Video</li></ul>
+          </div>
+        </article>
+
+        <article class="about-post" data-label="Experience">
+          <h2 class="sr-only">Experience</h2>
+          <div class="post-row">
+            <h3>Parsons School of Design</h3>
+            <ul class="reveal-list"><li>BFA Communication Design</li><li>2026 – 2029</li></ul>
+          </div>
+          <div class="post-row">
+            <h3>Republic of Korea Army</h3>
+            <ul class="reveal-list"><li>Military service</li><li>2023 – 2025</li></ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 오른쪽: 화면에 붙어 있는 이미지 + 지금 듣는 음악 -->
+      <aside class="about-side">
+        <div class="side-figure" role="img" aria-label="3D pixel cursor — drag to spin"></div>
+          </div>
+        </div>
+      </aside>
+
+    </section>
+
+    <!-- 7. CTA: 연락 유도 -->
+    <section class="cta">
+      <h2>Let’s talk</h2>
+      <p>Have a project in mind? Let’s make it together.</p>
+      <a class="email" href="mailto:kims352@newschool.edu">kims352@newschool.edu</a>
+      <a class="button" href="contact.html">Contact</a>
+    </section>
+
+  </main>
+
+  <!-- 8. FOOTER: 큰 이름 + 저작권 + 링크 -->
+  <footer class="site-footer">
+    <p class="footer-name" aria-hidden="true">andrew kim</p>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/seongsikkim">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/log394729/?hl=en">Instagram</a></li>
+    </ul>
+    <p class="copyright">© 2026 Andrew Kim</p>
+  </footer>
+
+  <!-- 시계 + 회전 링 -->
+  <script src="script.js"></script>
+
+  <!-- 3D 모델 (Three.js를 설치 없이 CDN에서 불러옴) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="figure.js"></script>
+</body>
+</html>

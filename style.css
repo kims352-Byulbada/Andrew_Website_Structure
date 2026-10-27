@@ -1,0 +1,226 @@
+/* ============================================
+   Project 4 — skeleton
+   뼈대(레이아웃)만 잡은 상태. 색·서체는 아래 변수만 바꾸면 전체에 반영됨.
+   ============================================ */
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #6b6b6b;
+  --line: #d9d9d9;
+  --placeholder: #e8e8e8;   /* 이미지 자리 회색 박스 */
+
+  --font: system-ui, sans-serif;
+  --gutter: 24px;           /* 화면 양옆 여백 */
+  --gap: 16px;              /* 요소 사이 기본 간격 */
+  --section: 120px;         /* 섹션 사이 간격 */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 이미지 자리 — 실제 이미지로 바꿀 때 <img>로 교체 */
+.media {
+  background: var(--placeholder);
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+/* 0. Skip link: 평소엔 숨겨져 있다가 Tab 누르면 보임 */
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: var(--gutter); top: 8px; background: var(--bg); padding: 8px; }
+
+/* 1. Header — 화면 위에 고정 */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+  padding: 16px var(--gutter);
+  background: var(--bg);
+}
+.status { color: var(--muted); }
+.main-nav ul { display: flex; gap: 24px; }
+
+/* main 안의 모든 섹션 공통 여백 */
+main > * { padding: 0 var(--gutter); margin-bottom: var(--section); }
+
+/* 2. Hero — 화면 한 장 높이, 가운데에 텍스트, 그 둘레를 카드가 돎 (script.js) */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: grid;
+  place-items: center;   /* 텍스트를 정중앙에 */
+  overflow: hidden;
+}
+.hero-text { position: relative; z-index: 1; text-align: center; max-width: 30ch; }
+.hero-meta { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+.hero h1 { font-size: clamp(20px, 2.4vw, 32px); line-height: 1.2; font-weight: 500; }
+
+/* 링: 화면 정중앙의 점 하나. 카드들은 이 점 기준으로 JS가 위치를 정함 */
+.orbit { position: absolute; inset: 0; display: grid; place-items: center; }
+.ring { position: relative; width: 0; height: 0; }
+.card { position: absolute; left: 0; top: 0; will-change: transform; }
+
+/* 카드 크기 — margin은 크기의 절반만큼 당겨서 카드 중심을 점에 맞춤 */
+.card-inner {
+  width: 110px;
+  height: 140px;
+  margin: -70px 0 0 -55px;
+  background: var(--placeholder);
+  transition: transform 0.35s ease;   /* 커지고 작아지는 걸 부드럽게 */
+}
+
+/* 크기를 조금씩 다르게 해서 덜 기계적으로 보이게 */
+.card:nth-child(3n) .card-inner   { width: 125px; height: 160px; margin: -80px 0 0 -62px; }
+.card:nth-child(3n+1) .card-inner { width: 95px;  height: 120px; margin: -60px 0 0 -47px; }
+
+/* 마우스 올린 카드: 커지고 다른 카드들 위로 올라옴 */
+.card:hover { z-index: 2; }
+.card:hover .card-inner { transform: scale(1.6); }
+
+/* 섹션 제목 줄: 왼쪽 제목, 오른쪽 View all */
+.section-head { display: flex; justify-content: space-between; align-items: baseline; }
+h2 { font-size: 28px; font-weight: 500; margin-bottom: 24px; }
+.section-intro { color: var(--muted); max-width: 45ch; margin-bottom: 40px; }
+
+/* 3. Selected work — 2열 그리드 */
+.case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px var(--gap); }
+.case .media { margin-bottom: 12px; }
+.case-type, .case-tags { color: var(--muted); font-size: 14px; }
+.case h3 { font-size: 20px; font-weight: 500; }
+.view-all { display: inline-block; margin-top: 40px; }
+
+/* 4. More projects — 이미지 4칸 + 텍스트 목록 */
+.media-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); margin-bottom: 40px; }
+.project-list li { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--gap); padding: 16px 0; border-top: 1px solid var(--line); }
+.project-list h3 { font-size: 16px; font-weight: 500; }
+.project-list h3 span { color: var(--muted); font-weight: 400; margin-left: 8px; }
+
+/* 5. Marquee — 같은 목록 2개를 왼쪽으로 계속 밀어서 무한 반복처럼 보이게 */
+.marquee { display: flex; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+/* padding-right = gap 이어야 복사본끼리 이어지는 곳 간격이 똑같아져서 이음매가 안 보임 */
+.marquee-track { display: flex; flex-shrink: 0; gap: 64px; padding: 24px 64px 24px 0; animation: scroll 20s linear infinite; }
+.marquee-track li { font-size: 24px; white-space: nowrap; }
+.marquee:hover .marquee-track { animation-play-state: paused; }  /* 마우스 올리면 멈춤 */
+@keyframes scroll { to { transform: translateX(-100%); } }
+
+/* 6. About ~ Experience — 3열: [고정 라벨] [스크롤되는 글] [고정 이미지] */
+.about-scroll {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.3fr;
+  gap: var(--gap);
+  align-items: start;   /* 이게 있어야 sticky가 동작함 (기본값 stretch면 안 붙음) */
+}
+
+/* 왼쪽 라벨: 화면 세로 가운데쯤에 붙어서 따라옴 */
+.about-pin { position: sticky; top: 50vh; }
+.pin-label { font-size: 14px; color: var(--muted); }
+
+/* 가운데 글: 파트 사이 간격을 margin이 아닌 padding으로 줘야
+   파트끼리 빈틈없이 붙어서, 화면 가운데 선이 항상 어떤 파트 위에 있게 됨 → 라벨이 안 끊김 */
+.about-post { padding-bottom: 30vh; }
+.about-post:last-child { padding-bottom: 20vh; }
+.about-body p { font-size: 20px; max-width: 40ch; margin-bottom: 16px; }
+
+/* What I do / Experience 한 줄: 왼쪽 제목, 오른쪽 목록 */
+.post-row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--gap);
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+.post-row:first-of-type { border-top: 0; }
+.post-row h3 { font-size: 16px; font-weight: 500; }
+
+/* 목록 항목: 처음엔 흐리게, 화면 안으로 들어오면 진해짐 (script.js가 .is-on을 붙임) */
+.reveal-list li { color: var(--line); transition: color 0.5s ease; }
+.reveal-list li.is-on { color: var(--text); }
+
+/* 오른쪽: 이미지 + 위젯이 화면에 붙어 있음 */
+.about-side { position: sticky; top: 120px; display: grid; gap: 24px; }
+.side-figure {
+  aspect-ratio: 3 / 4;
+  background: var(--placeholder);   /* 3D 불러오기 전 자리 */
+  cursor: grab;
+  touch-action: none;               /* 끌 때 페이지가 같이 스크롤되지 않게 */
+}
+.side-figure.is-loaded { background: none; }
+.side-figure.is-dragging { cursor: grabbing; }
+.side-figure canvas { display: block; width: 100%; height: 100%; }
+
+/* 화면에는 안 보이지만 스크린리더는 읽는 제목 */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* 빈칸: 밑줄 친 고정 폭 칸 — 단어가 바뀌어도 문장이 들썩이지 않게 폭을 고정 */
+.blank {
+  display: inline-block;
+  min-width: 7.5em;
+  border-bottom: 1px solid var(--text);
+  text-align: center;
+  cursor: pointer;
+}
+/* "Drawing"이 나왔을 때만 커서가 연필 모양으로 바뀜 (끝의 2 22 = 연필 끝이 클릭 지점) */
+.blank.is-drawing {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M16.5 3.5l4 4L8 20l-5 1 1-5z' fill='%23fff' stroke='%23000' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M14 6l4 4' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") 2 22, pointer;
+}
+
+/* 지금 듣는 음악 위젯 */
+.now { display: flex; align-items: center; gap: 16px; padding: 12px; border: 1px solid var(--line); }
+.now-cover { width: 48px; height: 48px; background: var(--placeholder); flex-shrink: 0; }
+.now-label { color: var(--muted); font-size: 12px; }
+
+/* 7. CTA */
+.cta { text-align: center; }
+.cta h2 { font-size: clamp(40px, 8vw, 120px); line-height: 1; }
+.cta p { color: var(--muted); margin-bottom: 24px; }
+.cta .email { display: block; font-size: 20px; margin-bottom: 24px; }
+.button { display: inline-block; padding: 12px 28px; border: 1px solid var(--text); border-radius: 999px; }
+
+/* 8. Footer — 아주 큰 이름 */
+.site-footer { padding: 0 var(--gutter) 24px; border-top: 1px solid var(--line); }
+.footer-name { font-size: 18vw; line-height: 1; font-weight: 600; letter-spacing: -0.04em; }
+.footer-links { display: flex; gap: 24px; margin: 16px 0; }
+.copyright { color: var(--muted); font-size: 14px; }
+
+/* 모바일: 여러 열 → 1~2열 */
+@media (max-width: 720px) {
+  :root { --section: 80px; --gutter: 16px; }
+  .site-header { flex-wrap: wrap; }
+  .status { display: none; }
+  .hero-text { max-width: 55vw; }
+  .hero h1 { font-size: 17px; }
+  .card-inner, .card:nth-child(n) .card-inner { width: 58px; height: 74px; margin: -37px 0 0 -29px; }
+  .case-grid, .project-list li { grid-template-columns: 1fr; }
+  /* About 구간: 한 줄로 쌓고, 라벨만 위에 붙어서 따라옴 */
+  .about-scroll { grid-template-columns: 1fr; }
+  .about-pin { top: 56px; z-index: 5; background: var(--bg); padding: 8px 0; }
+  .about-side { position: static; grid-template-columns: 1fr; }
+  .side-figure { display: none; }
+  .media-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 움직임 줄이기 설정을 켠 사람에겐 마퀴 정지 */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }  /* 링은 script.js에서 처리 */
+  .card-inner, .reveal-list li { transition: none; }
+}
