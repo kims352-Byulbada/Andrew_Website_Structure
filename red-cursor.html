@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Red Cursor — Andrew Kim</title>
+  <meta name="description" content="The Red Cursor: A life-size pixel cursor, built as a sculpture and used as a prop for a video.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Andrew Kim</a>
+    <p class="status">Currently in New York <span id="clock">--:--</span></p>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. 제목 + 한 줄 소개 + 대표 이미지 -->
+    <section class="case-hero">
+      <p class="case-type">Personal project</p>
+      <h1>The Red Cursor</h1>
+      <p class="case-lede">A life-size pixel cursor, built as a sculpture and used as a prop for a video.</p>
+      <img class="case-cover" src="images/red-cursor/cover.jpg" alt="The Red Cursor mounted on a white wall: black pixel blocks outline the arrow and red strings fill it." width="2000" height="1333">
+    </section>
+
+    <!-- 2. 이야기 + 스펙 시트 (홈 About처럼 3열: 라벨 / 글 / 스펙) -->
+    <section class="case-section">
+      <h2 class="case-label">Overview</h2>
+      <div class="case-story">
+        <p>The Red Cursor is a life-size pixel mouse cursor, made as a physical prop for a video. It translates a digital tool into real space.</p>
+        <p>On a screen, the cursor directs attention and selection. The sculpture does the same thing physically, inviting people to pause and make more intentional choices.</p>
+        <p>In the video Red Cursor: Off the Hustle, the cursor sits in overlooked yet meaningful places instead of tourist landmarks, and invites viewers to follow it at their own pace.</p>
+      </div>
+      <aside class="spec" aria-label="Project details">
+        <dl>
+          <div><dt>Year</dt><dd>2025</dd></div>
+          <div><dt>Type</dt><dd>Sculpture, video prop</dd></div>
+          <div><dt>Build</dt><dd>Black pixel blocks for the outline, red strings for the fill</dd></div>
+          <div><dt>Plan</dt><dd>Pixel drawing in Illustrator</dd></div>
+          <div><dt>Video</dt><dd>Red Cursor: Off the Hustle</dd></div>
+        </dl>
+        <!-- 영상을 유튜브/비메오에 올리면 여기에 링크 버튼을 추가하세요 -->
+      </aside>
+    </section>
+
+    <!-- 3. 과정 (순서가 있어서 번호를 붙임) -->
+    <section class="case-section">
+      <h2 class="case-label">How it’s made</h2>
+      <ol class="steps steps--numbered">
+        <li class="step">
+          <figure class="step-media step-media--narrow">
+            <img src="images/red-cursor/plan.jpg" alt="The cursor drawn on a pixel grid: a black outline around a red fill." width="1000" height="1417" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>Start from the screen</h3>
+            <p>The plan is the arrow everyone already knows, drawn pixel by pixel: a black outline around a red fill.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media step-media--trio">
+            <img src="images/red-cursor/front.jpg" alt="The sculpture from the front." width="1400" height="1890" loading="lazy">
+            <img src="images/red-cursor/back.jpg" alt="The sculpture from behind." width="748" height="1031" loading="lazy">
+            <img src="images/red-cursor/side.jpg" alt="The sculpture from the side." width="748" height="1121" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>Outline in blocks, fill in red</h3>
+            <p>Each outline pixel becomes a black block, and the red fill becomes strings stretched between them.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media step-media--pair">
+            <img src="images/red-cursor/dsc00318.jpg" alt="The cursor mounted on the wall, seen from below." width="1600" height="1067" loading="lazy">
+            <img src="images/red-cursor/dsc00323.jpg" alt="The cursor mounted on the wall, seen from the side." width="1600" height="1067" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>On the wall</h3>
+            <p>Mounted on a wall, it does what a cursor does: it points.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 4. 다음 작업으로 -->
+    <nav class="next-case" aria-label="Next project">
+      <p>Next project</p>
+      <a href="last-remedy.html">
+        <span class="next-title">The Last Remedy</span>
+        <img src="images/cards/last-remedy.jpg" alt="" width="1200" height="900" loading="lazy">
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-name" aria-hidden="true">andrew kim</p>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/seongsikkim">LinkedIn</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+    <p class="copyright">© 2026 Andrew Kim</p>
+  </footer>
+
+  <!-- 시계 (+ 움직임 줄이기 설정이면 영상 자동재생 멈춤) -->
+  <script src="page.js"></script>
+</body>
+</html>

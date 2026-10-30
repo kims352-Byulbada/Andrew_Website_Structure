@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEURO SIP — Andrew Kim</title>
+  <meta name="description" content="NEURO SIP: A fictional functional drink that records, deletes or rewrites your memories, packaged in three variants.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Andrew Kim</a>
+    <p class="status">Currently in New York <span id="clock">--:--</span></p>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. 제목 + 한 줄 소개 + 대표 이미지 -->
+    <section class="case-hero">
+      <p class="case-type">Personal project</p>
+      <h1>NEURO SIP</h1>
+      <p class="case-lede">A fictional functional drink that records, deletes or rewrites your memories, packaged in three variants.</p>
+      <img class="case-cover" src="images/neuro-sip/cover.jpg" alt="NEURO SIP shopping bags in red, yellow and blue behind three bottles labelled REC, DEL and LUC, with boxes and business cards in front." width="2000" height="1346">
+    </section>
+
+    <!-- 2. 이야기 + 스펙 시트 (홈 About처럼 3열: 라벨 / 글 / 스펙) -->
+    <section class="case-section">
+      <h2 class="case-label">Overview</h2>
+      <div class="case-story">
+        <p>NEURO SIP is a speculative beverage brand built around impossible cognitive functions: recording, deleting, or altering memories.</p>
+        <p>I designed a complete packaging system for three variants, REC, DEL and LUC, and carried it across bottles, boxes, shopping bags and business cards.</p>
+        <p>Each variant borrows the language of a device. REC is a camera screen that says “Preserve your present.” DEL is a system warning: “All data will be deleted. Are you sure? [Y/N]” LUC promises sweet dreams.</p>
+        <p>The project explores how design can make abstract mental processes visible, and build a whole product experience inside a fictional world.</p>
+      </div>
+      <aside class="spec" aria-label="Project details">
+        <dl>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Type</dt><dd>Packaging system, brand identity</dd></div>
+          <div><dt>Variants</dt><dd>REC (record), DEL (delete), LUC (lucid)</dd></div>
+          <div><dt>Pieces</dt><dd>Bottle labels, boxes, shopping bags, business cards</dd></div>
+          <div><dt>Details</dt><dd>Pixel wordmark and potion icons; every label carries nutrition facts and a barcode</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <!-- 3. 구성 요소 (순서가 없어서 번호 없음) -->
+    <section class="case-section">
+      <h2 class="case-label">The system</h2>
+      <ul class="steps">
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/neuro-sip/labels.jpg" alt="The three bottle labels: LUC with a dream sky, REC with a camera screen, DEL with a deletion warning, each with nutrition facts and a barcode." width="1383" height="1164" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>Three labels, three devices</h3>
+            <p>LUC is a dreamy sky, REC a camera screen, DEL a warning dialog. The frame stays the same on all three: barcode, main panel, nutrition facts and the stacked NEURO SIP logo.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/neuro-sip/bottles.jpg" alt="Yellow REC, red DEL and blue LUC bottles." width="1200" height="900" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>One color per memory</h3>
+            <p>Yellow records, red deletes, blue dreams. The drink itself carries the color, so the three variants are easy to tell apart.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/neuro-sip/boxes.jpg" alt="DELETE, LUCID and RECORD boxes with NEURO SIP business cards in front." width="1400" height="696" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>Boxes and cards</h3>
+            <p>The boxes spell each variant out in full: DELETE, LUCID, RECORD. The business cards reuse the pixel potion.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4. 다음 작업으로 -->
+    <nav class="next-case" aria-label="Next project">
+      <p>Next project</p>
+      <a href="red-cursor.html">
+        <span class="next-title">The Red Cursor</span>
+        <img src="images/cards/red-cursor.jpg" alt="" width="1200" height="900" loading="lazy">
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-name" aria-hidden="true">andrew kim</p>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/seongsikkim">LinkedIn</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+    <p class="copyright">© 2026 Andrew Kim</p>
+  </footer>
+
+  <!-- 시계 (+ 움직임 줄이기 설정이면 영상 자동재생 멈춤) -->
+  <script src="page.js"></script>
+</body>
+</html>

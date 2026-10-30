@@ -47,7 +47,11 @@ new ResizeObserver(resize).observe(box);
 const pivot = new THREE.Group();   // 이 그룹을 돌리면 모델이 제자리에서 돎
 scene.add(pivot);
 
-const gltf = await new GLTFLoader().loadAsync(MODEL_FILE);
+// cursor.glb가 폴더에 없으면 빈 회색 상자 대신 그 자리를 숨김
+const gltf = await new GLTFLoader().loadAsync(MODEL_FILE).catch((error) => {
+  box.hidden = true;
+  throw error;
+});
 const model = gltf.scene;
 
 // 모델 중심을 가운데로, 크기를 MODEL_SIZE에 맞춤

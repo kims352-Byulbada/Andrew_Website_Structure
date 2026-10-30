@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glazed Morphology — Andrew Kim</title>
+  <meta name="description" content="Glazed Morphology: A 15-second vertical film for Abib’s PDRN collagen lip mask, where a full stop turns into a glazed specimen.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Andrew Kim</a>
+    <p class="status">Currently in New York <span id="clock">--:--</span></p>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. 제목 + 한 줄 소개 + 대표 이미지 -->
+    <section class="case-hero">
+      <p class="case-type">Competition entry, Abib × DD@P creative sprint</p>
+      <h1>Glazed Morphology</h1>
+      <p class="case-lede">A 15-second vertical film for Abib’s PDRN collagen lip mask, where a full stop turns into a glazed specimen.</p>
+      <!-- 영상 배경색을 영상 가장자리 색과 맞춰서 화면 끝까지 이어져 보이게 -->
+      <figure class="case-film">
+        <video src="media/glazed-morphology.mp4" poster="images/glazed-morphology/poster.jpg" width="720" height="1280" controls autoplay muted loop playsinline aria-label="Glazed Morphology, the full film"></video>
+      </figure>
+    </section>
+
+    <!-- 2. 이야기 + 스펙 시트 (홈 About처럼 3열: 라벨 / 글 / 스펙) -->
+    <section class="case-section">
+      <h2 class="case-label">Overview</h2>
+      <div class="case-story">
+        <p>Made for the Abib × DD@P creative sprint. The film opens on three words, What is Abib, then LIP MASK fills the frame. The camera pushes into the full stop, and the dot glazes over into a jelly sphere.</p>
+        <p>From there it becomes a specimen sheet. Fruit cut faces and jelly textures sit on one paper table, each paired with a line of Abib’s own product copy, until the jar and the logo close the film.</p>
+        <p>I wanted it to feel clean, like a lab.</p>
+      </div>
+      <aside class="spec" aria-label="Project details">
+        <dl>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Challenge</dt><dd>Abib × DD@P creative sprint</dd></div>
+          <div><dt>Format</dt><dd>Vertical film, 1080 × 1920, 15 seconds</dd></div>
+          <div><dt>Images</dt><dd>Fruit cut faces and jelly textures generated with Meshy AI</dd></div>
+          <div><dt>Animation</dt><dd>Coded with Claude from my storyboard</dd></div>
+          <div><dt>Music</dt><dd>Piano with the Salamander Grand Piano samples by Alexander Holm, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <!-- 3. 과정 (순서가 있어서 번호를 붙임) -->
+    <section class="case-section">
+      <h2 class="case-label">Process</h2>
+      <ol class="steps steps--numbered">
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/glazed-morphology/sketch.jpg" alt="Process board: the first storyboard, drawn by hand on lined paper." width="1920" height="1080" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>Storyboard by hand</h3>
+            <p>The first sketch set the order: the typed words, the big type, the close-up into the full stop, the dot becoming a specimen, eight quick snaps, then the jar.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/glazed-morphology/specimens.jpg" alt="Process board: six fruit cut faces and four jelly textures laid on one table." width="1920" height="1080" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>Specimens on one table</h3>
+            <p>The fruit cut faces and the jelly texture were generated with Meshy AI, then laid on one paper table with a soft key-light shadow.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/glazed-morphology/frames.jpg" alt="Four frames: LIP MASK, the close-up on the full stop, the dot glazing over, and a pomegranate specimen." width="1800" height="787" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>From type to specimen</h3>
+            <p>LIP MASK. The close-up on the full stop. The dot glazing over. Then the first specimen.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 4. 다음 작업으로 -->
+    <nav class="next-case" aria-label="Next project">
+      <p>Next project</p>
+      <a href="echo.html">
+        <span class="next-title">ECHO</span>
+        <img src="images/cards/echo.jpg" alt="" width="1200" height="900" loading="lazy">
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-name" aria-hidden="true">andrew kim</p>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/seongsikkim">LinkedIn</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+    <p class="copyright">© 2026 Andrew Kim</p>
+  </footer>
+
+  <!-- 시계 (+ 움직임 줄이기 설정이면 영상 자동재생 멈춤) -->
+  <script src="page.js"></script>
+</body>
+</html>

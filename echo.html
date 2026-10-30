@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ECHO — Andrew Kim</title>
+  <meta name="description" content="ECHO: A service that tells every New Yorker who reports noise what happened next, even when the answer is no.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Andrew Kim</a>
+    <p class="status">Currently in New York <span id="clock">--:--</span></p>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. 제목 + 한 줄 소개 + 대표 이미지 -->
+    <section class="case-hero">
+      <p class="case-type">Competition entry, Civic by Design 2026</p>
+      <h1>ECHO</h1>
+      <p class="case-lede">A service that tells every New Yorker who reports noise what happened next, even when the answer is no.</p>
+      <img class="case-cover" src="images/echo/cover.jpg" alt="ECHO title slide: the yellow wordmark and the line Every Complaint Has an Outcome, beside rings of sound on deep purple." width="1920" height="1080">
+    </section>
+
+    <!-- 2. 이야기 + 스펙 시트 (홈 About처럼 3열: 라벨 / 글 / 스펙) -->
+    <section class="case-section">
+      <h2 class="case-label">Overview</h2>
+      <div class="case-story">
+        <p>New Yorkers file about 610,000 noise complaints a year, and most never learn what happened. In one NYU study, 78% of complaints routed to DEP ended with “No violation could be observed.”</p>
+        <p>The challenge was about noise. I focused on what happens after a report: people file one and never hear back. ECHO, short for Every Complaint Has an Outcome, gives every report a live tracker, like a food delivery app.</p>
+        <p>When three households report the same place within 30 minutes, a silent night unit goes out with a calibrated meter. Every tracker ends with one of five answers, and a third night of reports opens a DEP case automatically.</p>
+        <p>ECHO can start today on 311 data.</p>
+      </div>
+      <aside class="spec" aria-label="Project details">
+        <dl>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Challenge</dt><dd>Civic by Design 2026, AIGA × Designpreneurs</dd></div>
+          <div><dt>Tracks</dt><dd>Service, strategy, UX and UI, branding and communication</dd></div>
+          <div><dt>Format</dt><dd>Eight-slide Figma Slides deck and a Figma Make prototype</dd></div>
+          <div><dt>Type</dt><dd>Archivo Black, Barlow Condensed Black, Archivo, IBM Plex Mono</dd></div>
+          <div><dt>Sources</dt><dd>Civic by Design brief; SONYC research project, NYU, 2019</dd></div>
+        </dl>
+        <p class="spec-links">
+          <a class="button" href="https://www.figma.com/make/fyKZp3hu36GBcDtydasdCl">Try the prototype</a>
+          <a class="button" href="https://www.figma.com/slides/0VhfjhD6jS75GNdrm8cglz">View the deck</a>
+        </p>
+      </aside>
+    </section>
+
+    <!-- 3. 과정 (순서가 있어서 번호를 붙임) -->
+    <section class="case-section">
+      <h2 class="case-label">The proposal</h2>
+      <ol class="steps steps--numbered">
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/echo/problem.jpg" alt="Slide: 610,000 go in. Most never come back. Complaints fall like stars into a black hole." width="1920" height="1080" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>610,000 go in. Most never come back.</h3>
+            <p>Most reports end without a ticket, and the person who filed never hears why. The slide draws them as stars falling into a black hole.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/echo/tracker.jpg" alt="Slide: Every report gets a tracker. Four phone screens: report received, a unit on the way, a reading on scene, and the outcome." width="1920" height="1080" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>Every report gets a tracker.</h3>
+            <p>Like a food delivery app: you see when a unit leaves, how far away it is, and what it found. Four stages, four colors: received, on the way, on scene, outcome.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/echo/answers.jpg" alt="Slide: Nothing happened is an answer too. Five message cards, one for each possible ending." width="1920" height="1080" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>“Nothing happened” is an answer too.</h3>
+            <p>Every ending gets its own message: what happened, why, and what’s next. Five answers cover every case: over the limit, under the limit, quiet on arrival, no unit tonight, sent elsewhere.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/echo/rollout.jpg" alt="Slide: It starts with data the city already has. A calendar of repeat nights beside a three-step rollout." width="1920" height="1080" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>It starts with data the city already has.</h3>
+            <p>Now, a tracker on today’s 311 data. Next, repeat nights become patterns that act. Later, the ECHO night unit.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/echo/brand.jpg" alt="Slide: A name that promises an answer. The ECHO wordmark, app icon, status colors and typefaces." width="1920" height="1080" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>A name that promises an answer.</h3>
+            <p>An echo is a sound that comes back to you, the way an answer should. The trails behind the wordmark are the echo: a report goes out, and an answer comes back.</p>
+          </div>
+        </li>
+        <li class="step">
+          <figure class="step-media">
+            <img src="images/echo/poster.jpg" alt="Slide: the NYC Night Noise Response poster, and where it goes: laundromats, building lobbies and bodega windows." width="1920" height="1080" loading="lazy">
+          </figure>
+          <div class="step-text">
+            <h3>Where people already wait.</h3>
+            <p>Posters go up in laundromats, building lobbies and bodega windows: places New Yorkers stand still for a minute. They say where to report, and promise an answer back.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 4. 다음 작업으로 -->
+    <nav class="next-case" aria-label="Next project">
+      <p>Next project</p>
+      <a href="neuro-sip.html">
+        <span class="next-title">NEURO SIP</span>
+        <img src="images/cards/neuro-sip.jpg" alt="" width="1200" height="900" loading="lazy">
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-name" aria-hidden="true">andrew kim</p>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/seongsikkim">LinkedIn</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+    <p class="copyright">© 2026 Andrew Kim</p>
+  </footer>
+
+  <!-- 시계 (+ 움직임 줄이기 설정이면 영상 자동재생 멈춤) -->
+  <script src="page.js"></script>
+</body>
+</html>
